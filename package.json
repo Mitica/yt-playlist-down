@@ -1,0 +1,19 @@
+{
+  "name": "youtube-playlist-down",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "youtume",
+    "downloader"
+  ],
+  "author": "Dumitru Cantea",
+  "license": "ISC",
+  "dependencies": {
+    "youtube-dl": "^1.12.2"
+  }
+}
