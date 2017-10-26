@@ -7,7 +7,7 @@ const data = require('./data');
 function playlistDownloader(name, url, dir) {
     console.log(`Starting download url=${url}, name=${name}, dir=${dir}`);
     return new Promise((resolve, reject) => {
-        ytdl.exec(url, ['--ignore-config', '--yes-playlist', '-r', '1M', '--fragment-retries', '10', '-f', 'mp4', '--sub-lang', 'en,ro', '--audio-format', 'mp3', '-o', '"' + path.join(dir, name) + '/%(playlist)s%(title)s.%(ext)s'], {}, function (err, output) {
+        ytdl.exec(url, ['--ignore-config', '--yes-playlist', '-r', '1M', '--fragment-retries', '10', '-f', 'mp4', '--all-subs', '--audio-format', 'mp3', '-o', path.join(dir, name,'%(playlist_title)s','%(title)s.%(ext)s')], {}, function (err, output) {
             if (err) {
                 return reject(err);
             }
