@@ -4,7 +4,7 @@ const cmd = require('node-cmd');
 
 module.exports = function (file) {
     return new Promise((resolve, reject) => {
-        const outfile = file.substr(0, file.length - 3) + 'avi';
+        const outfile = file.substr(0, file.length - 3) + 'mkv';
         cmd.get(`ffmpeg -i "${file}" "${outfile}"`, (error, result) => {
             if (error) {
                 return reject(error);
